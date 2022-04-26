@@ -11,6 +11,7 @@ public class BankApp {
         System.out.println("Hello in our Bank!");
         System.out.println("1. Display account details");
         System.out.println("2. Deposit money");
+        System.out.println("3. Withdrawal money");
         System.out.println("Enter your choice");
 
         int inputNumber = scanner.nextInt();
@@ -21,7 +22,11 @@ public class BankApp {
             case 2:
                 account.depositMoney();
                 break;
-
+            case 3:
+                account.withdrawalMoney();
+                break;
+            default:
+                System.out.println("Wrong choice - please read closely and try again");
 
         }
     }
