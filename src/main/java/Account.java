@@ -78,4 +78,12 @@ public class Account {
         }
 
     }
+
+    public boolean search(String accountNumber) {
+        if(accNumber.equals(accountNumber)){
+            return true;
+        } else{
+            return false;
+        }
+    }
 }
