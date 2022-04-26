@@ -40,4 +40,19 @@ public class Account {
 
     }
 
+    public void showAccount() {
+        System.out.println("Name: " + name);
+        System.out.println("Surname: " + surname);
+        System.out.println("Account number: " + accNumber);
+        System.out.println("Balance: " + balance);
+    }
+
+    public void depositMoney() {
+        System.out.println("How much money you want to deposit?");
+        long amount = scanner.nextLong();
+        long new_balance = balance + amount;
+        System.out.println("Your balance now is: " + new_balance);
+
+
+    }
 }
