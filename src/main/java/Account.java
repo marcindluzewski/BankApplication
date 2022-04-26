@@ -1,35 +1,47 @@
 import java.util.Scanner;
 
 public class Account {
-   private String name;
-   private String surname;
-   private String accNumber;
-   private long balance;
+    private String name;
+    private String surname;
+    private String accNumber;
+    private long balance;
 
-   Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
-   public String getName(){
-       return name;
-   }
-   public String getSurname(){
-       return surname;
-   }
-   public String getAccNumber(){
-       return accNumber;
-   }
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getAccNumber() {
+        return accNumber;
+    }
+
     public long getBalance() {
         return balance;
     }
 
-    public void setName(String name){
-       this.name = name;
-   }
-    public void setSurname(String surname){this.surname = surname;}
-    public void setAccNumber(String accNumber){this.accNumber = accNumber;}
-    public void setBalance(long balance) {this.balance = balance;}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public void createAccount(){
-        System.out.println("Hello, please enter your name");
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setAccNumber(String accNumber) {
+        this.accNumber = accNumber;
+    }
+
+    public void setBalance(long balance) {
+        this.balance = balance;
+    }
+
+    public void createAccount() {
+        System.out.println("Please enter your name");
         name = scanner.next();
         System.out.println("Enter your surname");
         surname = scanner.next();
@@ -58,12 +70,12 @@ public class Account {
     public void withdrawalMoney() {
         System.out.println("How much money you want to withdraw?");
         long withdrawal = scanner.nextLong();
-        if(withdrawal > balance){
-            System.out.println("You don't have such money my Friend :( ");
+        if (withdrawal > balance) {
+            System.out.println("You don't have such money - your account balance is less than : " + withdrawal);
         } else {
             long new_balance = balance - withdrawal;
             System.out.println("Currently you have your account balance: " + new_balance);
         }
 
-        }
     }
+}
