@@ -1,14 +1,22 @@
 public class Account {
-   private String account_name;
-   private String account_surname;
+   private String name;
+   private String surname;
    private String accNumber;
    private long balance;
 
    public String getName(){
-       return account_name;
+       return name;
+   }
+   public String getSurname(){
+       return surname;
+   }
+   public String getAccNumber(){
+       return accNumber;
    }
 
-   public void setName(String account_name){
-       this.account_name = account_name;
+   public void setName(String name){
+       this.name = name;
    }
+   public void setSurname(String surname){this.surname = surname;}
+   public void setAccNumber(String accNumber){this.accNumber = accNumber;}
 }
